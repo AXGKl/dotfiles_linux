@@ -6,6 +6,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias pin='ping 8.8.8.8'
+alias gs='git status'
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
