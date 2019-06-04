@@ -10,6 +10,7 @@ unusual ones:
 - super-shift-x: https://dwm.suckless.org/patches/killunsel/dwm-killunsel-ceac8c91ff.diff
 - super-g: grid layout
 - ctrl-k: clear history (alacritty config)
+- super-p: dmenu launcher (disabled mapping in vmware keymapper)
 
 ## Via Vmware Keymapper:
 
@@ -69,6 +70,12 @@ https://blkct.wordpress.com/2017/06/16/how-to-start-dwm-from-lightdm/
 - Modify config.h to use it
 
 Did not stay with it, too slow on wide screen - went to alacritty
+
+#### Alacritty
+
+superfast terminal, nice config yaml.
+
+dnf copr enable mizuo/alacritty
 
 
 

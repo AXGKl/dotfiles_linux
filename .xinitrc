@@ -18,6 +18,8 @@ test -e /shared/gk/Desktop || vmhgfs-fuse -o allow_other -o auto_unmount .host:/
 # https://wiki.archlinux.org/index.php/VMware/Installing_Arch_as_a_guest
 vmware-user
 
+# clipboard manager (dmenu https://github.com/Pitometsu/keratin)
+/root/bin/keratin -d
 
 /root/bin/dwm_status &
 while true; do
