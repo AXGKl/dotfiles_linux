@@ -1,0 +1,5 @@
+#/usr/bin/env sh
+
+xhost + local:
+#sudo -u surf '/usr/bin/chromium-browser' &
+sudo -u surf '/usr/bin/qutebrowser'

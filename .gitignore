@@ -1,4 +1,23 @@
 # Byte-compiled / optimized / DLL files
+.Xauthor*
+.bash_history
+.bash_logout
+.cshrc
+*.swp
+.python_history
+.serverauth*
+.ssh*
+a.out
+anaconda-ks.cfg
+*.tar.gz
+.local
+.dbus
+.ccache
+.surf
+.tcshrc
+.viminfo
+.wget-hsts
+
 __pycache__/
 *.py[cod]
 *$py.class
