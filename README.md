@@ -64,7 +64,20 @@ Get Modline from `gtf 3840 2160 30 -x`
 Add to Monitor in xorg.conf 
 killall dwm ; start x -> big monitor :-)
 
+# Vmware Tools
 
+helpfull: https://wiki.archlinux.org/index.php/VMware/Installing_Arch_as_a_guest
+Basically I did nothing - they were installed correctly - except:
+
+- Installed vmxnet3 ehternet driver via enabling in .vmx file.
+
+- for Copy and Paste: vmware-user invokation in .xinitrc
+
+
+
+# Mouse /Keyboard
+
+xev is your friend, compare in mac and linux. No problems so far.
 
 
 
