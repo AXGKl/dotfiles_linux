@@ -3,27 +3,45 @@
 - In Fed30 Software Picker choose minimal, with admin tools and basic window managers -> you get lightdm.
 - vmware installs fusion tools automatically :-)
 
-## Super-C(opy):
+# Shortcuts
+
+unusual ones:
+
+super-shift-x: https://dwm.suckless.org/patches/killunsel/dwm-killunsel-ceac8c91ff.diff
+super-g: grid layout
+
+## Via Vmware Keymapper:
 
 Via vmware fusion keyboard mapping we map super-c to control-shift-c (same vor v). 
 So we can still kill via Ctrl-C
 
-# Suckless
+
+super-n = super-shift-return: new terminal (via vmware keymap)
+super-w = super-shift-c: kill window (via vmware keymap)
+super-c = super-shift-c (same for v): copy and paste
+
+# Base Install
+
+[./inst](./inst) folder.
+
+## Suckless
 
 patch -pw < patch.diff
 make clean install
 
 on error : add -R to patch command: patch -R -pw < patch.diff
 
+Better: git commit before, then try, then commit.
 
-# Dwm:
+
+### Dwm:
 
 Tutorial: https://dwm.suckless.org/tutorial/
 
-## Setup:
+#### Setup:
 	https://jacekkowalczyk.wordpress.com/2018/11/20/how-to-install-dwm-from-suckless-org-at-fedora-29/
 
-## installs:
+#### installs:
 
 	sudo dnf install dwm git dmenu st
 	mkdir ~/git && cd ~/git
@@ -43,17 +61,17 @@ Tutorial: https://dwm.suckless.org/tutorial/
 https://blkct.wordpress.com/2017/06/16/how-to-start-dwm-from-lightdm/
 
 
-# ST
+### ST
 
 - 0.8 with patches as in folder, order like on webpage given
 - Install Hack
 - Modify config.h to use it
 
+Did not stay with it, too slow on wide screen - went to alacritty
 
 
 
-
-# Big Resolution: xorg.conf
+## Big Resolution: xorg.conf
 
 	Xorg :0 -configure # basic xorg to start
 
@@ -64,7 +82,7 @@ Get Modline from `gtf 3840 2160 30 -x`
 Add to Monitor in xorg.conf 
 killall dwm ; start x -> big monitor :-)
 
-# Vmware Tools
+## Vmware Tools
 
 helpfull: https://wiki.archlinux.org/index.php/VMware/Installing_Arch_as_a_guest
 Basically I did nothing - they were installed correctly - except:
@@ -75,7 +93,7 @@ Basically I did nothing - they were installed correctly - except:
 
 
 
-# Mouse /Keyboard
+### Mouse /Keyboard
 
 xev is your friend, compare in mac and linux. No problems so far.
 
