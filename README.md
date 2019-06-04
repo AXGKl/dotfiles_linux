@@ -7,8 +7,9 @@
 
 unusual ones:
 
-super-shift-x: https://dwm.suckless.org/patches/killunsel/dwm-killunsel-ceac8c91ff.diff
-super-g: grid layout
+- super-shift-x: https://dwm.suckless.org/patches/killunsel/dwm-killunsel-ceac8c91ff.diff
+- super-g: grid layout
+- ctrl-k: clear history (alacritty config)
 
 ## Via Vmware Keymapper:
 
@@ -16,9 +17,9 @@ Via vmware fusion keyboard mapping we map super-c to control-shift-c (same vor v
 So we can still kill via Ctrl-C
 
 
-super-n = super-shift-return: new terminal (via vmware keymap)
-super-w = super-shift-c: kill window (via vmware keymap)
-super-c = super-shift-c (same for v): copy and paste
+- super-n = super-shift-return: new terminal (via vmware keymap)
+- super-w = super-shift-c: kill window (via vmware keymap)
+- super-c = super-shift-c (same for v): copy and paste
 
 # Base Install
 
