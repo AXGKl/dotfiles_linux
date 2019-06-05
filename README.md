@@ -106,9 +106,34 @@ Basically I did nothing - they were installed correctly - except:
 xev is your friend, compare in mac and linux. No problems so far.
 
 
+## Dynamic Window Titles
 
+We installed `z.sh`, which sets the `PROMPT_COMMAND` already (for adding into z history).
+So we extended for a further window title setter based on hostname and PWD (see addendum).
 
 
 # Addendum
 
+## Xorg config
+
 [xorg](./inst/xorg.conf)  (symlinked to /etc/X11/xorg.conf)
+
+## Window title
+
+```
+diff --git a/z.sh b/z.sh
+index c78f3cb..37bf8aa 100644
+--- a/z.sh
++++ b/z.sh
+@@ -247,7 +247,8 @@ elif type complete >/dev/null 2>&1; then
+     [ "$_Z_NO_PROMPT_COMMAND" ] || {
+         # populate directory list. avoid clobbering other PROMPT_COMMANDs.
+         grep "_z --add" <<< "$PROMPT_COMMAND" >/dev/null || {
+-            PROMPT_COMMAND="$PROMPT_COMMAND"$'\n''(_z --add "$(command pwd '$_Z_RESOLVE_SYMLINKS' 2>/dev/null)" 2>/dev/null &);'
++	    set_title='printf "\033]0;%s@%s - %s\007" "`whoami`" "`hostname`" "`pwd`"'
++            PROMPT_COMMAND="$PROMPT_COMMAND"$'\n''(_z --add "$(command pwd '$_Z_RESOLVE_SYMLINKS' 2>/dev/null)" 2>/dev/null &);'$set_title''
+         }
+     }
+ fi
+```
+

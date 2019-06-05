@@ -11,7 +11,7 @@ alias wd='display_size w'
 alias wm='display_size m'
 
 source /root/inst/z/z.sh
-
+#PROMPT_COMMAND='(_z --add "$(command pwd -P 2>/dev/null)" 2>/dev/null &);printf "\033]0;%s@%s - %s\007" "`whoami`" "`hostname`" "`pwd`"'
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
