@@ -1,7 +1,8 @@
 # Byte-compiled / optimized / DLL files
 dwm
-dmenu
 st
+dmenu
+*.orig
 # we move the original git folders away for updatability but still trackability in this super git repo
 .gitorig
 *.o
