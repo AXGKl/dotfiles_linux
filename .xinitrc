@@ -22,8 +22,16 @@ vmware-user
 /root/bin/keratin -d
 
 /root/bin/dwm_status &
+
+# capslock to escape
+setxkbmap -option caps:escape
+#xmodmap "clear lock"
+#xmodmap "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
+#xmodmap "keycode 66 = Escape NoSymbol Escape"
+
 while true; do
-    ssh-agent /usr/local/bin/dwm 2>/root/.dwm.log
+    #ssh-agent /usr/local/bin/dwm 2>/root/.dwm.log
+    /usr/local/bin/dwm 2>/root/.dwm.log
     #ssh-agent /usr/bin/i3 2>/root/.dwm.log
 done
 

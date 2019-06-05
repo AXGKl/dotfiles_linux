@@ -9,6 +9,9 @@ alias pin='ping 8.8.8.8'
 alias gs='git status'
 alias wd='display_size w'
 alias wm='display_size m'
+
+source /root/inst/z/z.sh
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
