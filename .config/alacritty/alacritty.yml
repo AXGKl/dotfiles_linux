@@ -465,7 +465,7 @@ alt_send_esc: true
 #   - AppKeypad
 key_bindings:
   # (Windows/Linux only)
-  - { key: K,        mods: Control,       action: ClearHistory      }
+  - { key: K,         mods: Alt|Super,       action: ClearHistory      }
   #- { key: V,        mods: Control|Shift, action: Paste            }
   #- { key: C,        mods: Control|Shift, action: Copy             }
   #- { key: Insert,   mods: Shift,         action: PasteSelection   }
