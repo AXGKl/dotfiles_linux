@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+import sys, os, subprocess as sp
+
+SSH='/usr/bin/ssh'
+SINGLE_ARGS='46AaCfGgKkMNnqsTtVvXxYy'
+
+def sh_help():
+    ret = os.system(SSH)
+    print('\n%s overwrites command to be passed with -c, overriding cipher_spec' % __file__)
+    print('e.g. ssh foohost -c "ps ax; ls"')
+    print('Default: -c bash')
+    return ret
+
+def main():
+    argv = list(sys.argv)
+    if not sys.stdin.isatty():
+        sys.exit(os.system(SSH + ' ' +  ' '.join(argv[1:])))
+
+    if not argv[1:] or '-h' in argv or '--help' in argv:
+        sys.exit(sh_help()) # shows usage
+    cmd = 'bash'
+    a, host = [], None
+    while argv[1:]:
+        arg = argv.pop(1)
+        if arg ==  '-c':
+            cmd = argv.pop(1)
+        elif not arg.startswith('-'):
+            host = arg
+        else:
+            a.append(arg)
+            if not arg[1:] in SINGLE_ARGS:
+                if not argv[1:]:
+                    print('Requires argument: %s' % arg)
+                    sys.exit(1)
+                a.append(argv.pop(1))
+    if not host:
+        print('Require host')
+        sys.exit(1)
+    #print('cmd', cmd)
+    #print('argv', str(a))
+    if not '-t' in a:
+        a.append('-t')
+
+    args, env = ' '.join(a), ''
+    cmd = '"$(</root/bin/terminal_env_to_source.sh) %s"' % cmd
+    ssh_cmd = ' '.join((SSH, args, host, cmd))
+    print('Running', ssh_cmd)
+    sys.exit(os.system(ssh_cmd))
+
+        
+    
+
+if __name__ == '__main__':
+    main()
+
+

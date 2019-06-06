@@ -14,7 +14,7 @@ alias open='xdg-open'
 # alacritty TERM is not supported remotely in vim:
 # term env also sent over to remote host, setting TERM away from alacritty (there not in termenv):
 test -z "$PROMPT_COMMAND" && { source /root/bin/terminal_env_to_source.sh; export TERM=alacritty; }
-#source /root/inst/z/z.sh
+source /root/inst/z/z.sh
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
