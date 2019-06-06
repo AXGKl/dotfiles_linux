@@ -38,7 +38,11 @@ Better: git commit before, then try, then commit.
 
 ### Dwm:
 
-Tutorial: https://dwm.suckless.org/tutorial/
+- Tutorial: https://dwm.suckless.org/tutorial/
+- Tags: http://web.archive.org/web/20120120161931/http://lubutu.com/rant/dwm-faq
+
+> When you view a tag you are not ‘visiting’ a workspace, you are pulling the tagged windows into a single workspace, which has a single active layout. There is no layout associated with any tag, because a tag is nothing in and of itself, it is just a label you can assign to windows.
+
 
 #### Setup:
 	https://jacekkowalczyk.wordpress.com/2018/11/20/how-to-install-dwm-from-suckless-org-at-fedora-29/
